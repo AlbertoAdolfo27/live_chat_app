@@ -1,0 +1,9 @@
+model App{
+    id String @id
+    name String
+    isActive Boolean @default(true)
+    apiKeyHash String @unique
+    createdAt DateTime @default(now())
+
+    @@index([id])
+}
