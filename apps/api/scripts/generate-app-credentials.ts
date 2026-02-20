@@ -12,8 +12,8 @@ function generateAppCredentials(appName: string) {
     const id = crypto.randomUUID()
 
     return {
-        name: appName,
-        id,
+        appName: appName,
+        appId: id,
         apiKey,
         apiKeyHash
     }
@@ -29,14 +29,11 @@ if (!appName) {
 
 const credentials = generateAppCredentials(appName);
 
-console.log("App credentials generated");
+
+
+console.log(`App "${appName}" credentials generated`);
+console.log(credentials);
 console.log("-----------------------------");
-console.log("(Save this into database)")
-console.log("APP ID:", credentials.id);
-console.log("APP NAME:", credentials.name);
-console.log("API KEY HASH:");
-console.log(credentials.apiKeyHash);
+console.log("(Save  \"appId\", \"appName\" and \"apiKeyHash\" into database)")
 console.log("-----------------------------");
-console.log("(Save this into a secury location):");
-console.log("API KEY");
-console.log(credentials.apiKey);
+console.log("(Save \"appKey\" into a secury location");

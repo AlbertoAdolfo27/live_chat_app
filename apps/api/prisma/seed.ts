@@ -1,12 +1,12 @@
-import prisma from "../src/infra/database/prisma.js"
 import "dotenv/config"
+import prisma from "@/src/infra/database/prisma.js"
 
 async function seed() {
     // Add SocketIO app and Web App
     return await prisma.app.createMany({
         data: [
-            { id: `${process.env.WEB_APP_ID}`, name: "Web App", apiKeyHash: `${process.env.WEB_APP_API_KEY_HASH}` },
-            { id: `${process.env.SOCKET_IO_APP_ID}`, name: "SocketIO App", apiKeyHash: `${process.env.SOCKET_IO_API_KEY_HASH}` },
+            { id: `${process.env.WEB_APP_ID}`, name: `${process.env.WEB_APP_NAME}`, apiKeyHash: `${process.env.WEB_APP_API_KEY_HASH}` },
+            { id: `${process.env.SOCKET_IO_APP_ID}`, name: `${process.env.SOCKET_IO_APP_NAME}`, apiKeyHash: `${process.env.SOCKET_IO_API_KEY_HASH}` },
         ],
         skipDuplicates: true
     })

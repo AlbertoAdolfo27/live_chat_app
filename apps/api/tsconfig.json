@@ -40,5 +40,11 @@
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
     "skipLibCheck": true,
+    
+    // Paths
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["./*"]
+    }
   },
 }

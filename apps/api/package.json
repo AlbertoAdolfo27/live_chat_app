@@ -2,7 +2,7 @@
   "name": "api",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "dev": "tsx watch src/server.ts",
     "build": "tsc",
@@ -15,7 +15,7 @@
   "type": "module",
   "dependencies": {
     "@fastify/swagger-ui": "^5.2.5",
-    "@prisma/adapter-mariadb": "^7.1.0",
+    "@prisma/adapter-mariadb": "^7.4.1",
     "@prisma/client": "^7.1.0",
     "argon2": "^0.44.0",
     "cors": "^2.8.5",

@@ -1,27 +1,32 @@
 {
   "name": "live_chat_app",
   "version": "1.0.0",
+  "private": true,
   "description": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "pnpm -r --parallel dev",
-    "build": "pnpm -r build",
-    "start": "pnpm -r start",
-    "clean": "pnpm -r exec rm -rf node_modules",
-    "dev:api": "pnpm --filter ./apps/api dev",
-    "dev:web": "pnpm --filter ./apps/web dev",
-    "dev:socket": "pnpm --filter ./apps/socket dev",
-    "build:api": "pnpm --filter ./apps/api build",
-    "build:web": "pnpm --filter ./apps/web build",
-    "build:socket": "pnpm --filter ./apps/socket build",
-    "start:api": "pnpm --filter ./apps/api start",
-    "start:web": "pnpm --filter ./apps/web start",
-    "start:socket": "pnpm --filter ./apps/socket start",
-    "generate:app-credentials": "pnpm --filter ./apps/api generate:app-credentials"
-
+    "devv": "pnpm -r --parallel dev",
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "start": "turbo start",
+    "clean": "turbo exec -- rm -rf node_modules",
+    "dev:api": "turbo dev --filter=./apps/api",
+    "dev:web": "turbo dev --filter=./apps/web",
+    "dev:socket": "turbo dev --filter=./apps/socket",
+    "build:api": "turbo build --filter=./apps/api",
+    "build:web": "turbo build --filter=./apps/web",
+    "build:socket": "turbo build --filter=./apps/socket",
+    "start:api": "turbo start --filter=./apps/api",
+    "start:web": "turbo start --filter=./apps/web",
+    "start:socket": "turbo start --filter=./apps/socket",
+    "generate-app-credentials:socket": "pnpm --filter ./apps/api generate:app-credentials socket-app",
+    "generate-app-credentials:web": "pnpm --filter ./apps/api generate:app-credentials web-app"
   },
   "keywords": [],
   "author": "Alberto Jordane Adolfo",
   "license": "MIT",
-  "packageManager": "pnpm@10.30.0"
+  "packageManager": "pnpm@10.30.0",
+  "devDependencies": {
+    "turbo": "^2.8.10"
+  }
 }
