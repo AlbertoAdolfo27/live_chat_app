@@ -1,0 +1,27 @@
+{
+  "name": "live_chat_app",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "pnpm -r --parallel dev",
+    "build": "pnpm -r build",
+    "start": "pnpm -r start",
+    "clean": "pnpm -r exec rm -rf node_modules",
+    "dev:api": "pnpm --filter ./apps/api dev",
+    "dev:web": "pnpm --filter ./apps/web dev",
+    "dev:socket": "pnpm --filter ./apps/socket dev",
+    "build:api": "pnpm --filter ./apps/api build",
+    "build:web": "pnpm --filter ./apps/web build",
+    "build:socket": "pnpm --filter ./apps/socket build",
+    "start:api": "pnpm --filter ./apps/api start",
+    "start:web": "pnpm --filter ./apps/web start",
+    "start:socket": "pnpm --filter ./apps/socket start",
+    "generate:app-credentials": "pnpm --filter ./apps/api generate:app-credentials"
+
+  },
+  "keywords": [],
+  "author": "Alberto Jordane Adolfo",
+  "license": "MIT",
+  "packageManager": "pnpm@10.30.0"
+}

@@ -7,7 +7,6 @@ import { verify } from "argon2"
 import fs from "node:fs"
 import path from "node:path"
 import { getAppByApiKey } from "../apps/app.service.js"
-import { Activity } from "react"
 
 // sign alg
 const alg = 'RS256';

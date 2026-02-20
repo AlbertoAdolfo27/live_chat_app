@@ -12,7 +12,7 @@ const app = express()
 app.use(express.json())
 const server = createServer(app)
 const io = new Server(server)
-const PORT = parseInt(`${process.env.PORT}`)
+const PORT = process.env.PORT as string || 3001
 
 // Middleware
 io.use(async (socket, next) => {
